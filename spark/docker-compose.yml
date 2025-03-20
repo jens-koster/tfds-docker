@@ -1,0 +1,8 @@
+services:
+  # generic spark container
+  base:
+    build: .
+    container_name: spark-base
+    environment:
+      - SPARK_MASTER_HOST=spark-master
+      - SPARK_MASTER_URL=spark://spark-master:7077
