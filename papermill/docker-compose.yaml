@@ -1,0 +1,15 @@
+# the python script is developed in the free data stack and manually copied here when stable.
+# data stack needs to be setup before testing here and the hellowrld notebook copied to /tmp/notebooks. etc...
+# docker run -v /tmp/notebooks:/tmp/notebooks papermill-base  --notebook 'helloworld' --parameters '{"p1":"hello", "p2":"world"}'
+---
+services:
+  base:
+    container_name: papermill-base
+    build:
+      context: .
+      args:
+        TFDS_VERSION: ${TFDS_VERSION}
+    volumes:
+      - /tmp/logs/book-runner:/tmp/logs
+      - /tmp/notebooks:/tmp/notebooks
+      - /tmp/output_notbooks:/tmp/output_notebooks
