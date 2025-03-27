@@ -6,4 +6,3 @@ papermill[all]==2.6.0
 dlt[postgres]==1.8.1
 dlt[duckdb]==1.8.1
 boto3==1.37.1
-beautifulsoup4==4.13.3

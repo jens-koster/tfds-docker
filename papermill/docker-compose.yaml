@@ -9,7 +9,3 @@ services:
       context: .
       args:
         TFDS_VERSION: ${TFDS_VERSION}
-    volumes:
-      - /tmp/logs/book-runner:/tmp/logs
-      - /tmp/notebooks:/tmp/notebooks
-      - /tmp/output_notbooks:/tmp/output_notebooks
